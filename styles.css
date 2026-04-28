@@ -503,6 +503,18 @@
   height: 28px;
 }
 
+.sp-90d-included-card__icon--fb {
+  background: none;
+  overflow: hidden;
+}
+
+.sp-90d-included-card__icon--fb img {
+  width: 160%;
+  height: 160%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .sp-90d-included-card__title {
   font-family: var(--sp-font-display);
   font-weight: 600;
