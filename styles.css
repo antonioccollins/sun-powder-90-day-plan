@@ -517,6 +517,27 @@
   color: var(--sp-muted);
 }
 
+.sp-90d-included-card--link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--sp-dur-base) var(--sp-ease-out), box-shadow var(--sp-dur-base) var(--sp-ease-out);
+}
+
+.sp-90d-included-card--link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sp-shadow-md);
+}
+
+.sp-90d-included-card__link-label {
+  display: inline-block;
+  margin-top: 12px;
+  font-family: var(--sp-font-body);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--sp-orange);
+  letter-spacing: 0.02em;
+}
+
 /* ── Curriculum ────────────────────────────────── */
 .sp-90d-curriculum-header {
   text-align: center;
