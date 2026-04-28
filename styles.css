@@ -74,11 +74,22 @@
   font-family: var(--sp-font-body);
   font-size: 13px;
   line-height: 1;
-  padding: 10px 20px;
+  padding: 12px 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 16px;
+}
+
+.sp-90d-banner__logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.sp-90d-banner__logo img {
+  height: 44px;
+  width: auto;
 }
 
 .sp-90d-banner__text {
@@ -87,10 +98,35 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-align: center;
+  flex: 1;
 }
 
 .sp-90d-banner__text strong {
   font-weight: 600;
+}
+
+.sp-90d-banner__text-mobile {
+  display: none;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--sp-cream);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  text-align: center;
+  transition: opacity 0.4s ease;
+}
+
+.sp-90d-banner__text-mobile.is-hidden {
+  opacity: 0;
+}
+
+.sp-90d-banner__cta.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .sp-90d-banner__cta {
@@ -117,7 +153,7 @@
 
 /* ── Layout Utilities ──────────────────────────── */
 .sp-90d-body {
-  padding-top: 44px;
+  padding-top: 48px;
 }
 
 .sp-90d-container {
@@ -820,12 +856,26 @@
 @media (max-width: 767px) {
   .sp-90d-banner {
     font-size: 11px;
-    padding: 8px 12px;
+    padding: 10px 20px;
+    gap: 8px;
+  }
+
+  .sp-90d-banner__logo img {
+    height: 32px;
+  }
+
+  .sp-90d-banner__text {
+    display: none;
+  }
+
+  .sp-90d-banner__text-mobile {
+    display: block;
   }
 
   .sp-90d-banner__cta {
     font-size: 11px;
     padding: 6px 12px;
+    transition: opacity 0.4s ease;
   }
 
   .sp-90d-hero {
